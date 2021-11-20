@@ -1,0 +1,17 @@
+.landingbg{
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+.landingcont{
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1200px) {
+    .landingbg{
+        height: 100%;
+        overflow: hidden;
+        width: auto;
+    position: fixed;
+    }
+  }

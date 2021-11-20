@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React,{Component} from 'react';
 import './App.css';
-
-function App() {
+import { Routes, Route,BrowserRouter } from "react-router-dom";
+import Shortner from "./gblinks/shortner";
+import Home from './homepage/home';
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      status:""
+    }
+  }
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <BrowserRouter>
+ <Routes>
+ <Route exact path="/" element={<Home />} />
+
+        <Route exact path="/url-shortner" element={<Shortner />} />
+      </Routes>
+      </BrowserRouter>
+      </div>
   );
+  }
 }
 
 export default App;
